@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+{% for postagem in lista %}
+
+<div class="collection">
+    <a href="{% url 'post' pk=postagem.pk %} "  class="collection-item">{{postagem.titulo}}</a>
+</div>
+
+{% endfor %}
+
+{% endblock conteudo %}
